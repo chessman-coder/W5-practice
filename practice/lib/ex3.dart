@@ -83,17 +83,17 @@ enum Product {
   dart(
     title: 'Dart',
     description: 'the best object language',
-    image: 'lib/assets/ex3/dart.png',
+    image: 'assets/ex3/dart.png',
   ),
   flutter(
     title: 'Flutter',
     description: 'the best mobile wider library',
-    image: 'lib/assets/ex3/flutter.png',
+    image: 'assets/ex3/flutter.png',
   ),
   firebase(
     title: 'Firebase',
     description: 'the best cloud database',
-    image: 'lib/assets/ex3/firebase.png',
+    image: 'assets/ex3/firebase.png',
   );
 
   final String title;

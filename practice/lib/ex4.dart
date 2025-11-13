@@ -69,23 +69,23 @@ class WeatherCard extends StatelessWidget {
   final List<Color> color;
 
   const WeatherCard({
-    Key? key,
+    super.key,
     required this.cityName,
     required this.minTemp,
     required this.maxTemp,
     required this.currentTemp,
     required this.color,
-  }) : super(key: key);
+  });
 
   String _getWeatherImage() {
     if (currentTemp <= 10) {
-      return 'lib/assets/ex4/veryCloudy.png';
+      return 'assets/ex4/veryCloudy.png';
     } else if (currentTemp <= 20) {
-      return 'lib/assets/ex4/cloudy.png';
+      return 'assets/ex4/cloudy.png';
     } else if (currentTemp <= 30) {
-      return 'lib/assets/ex4/sunnyCloudy.png';
+      return 'assets/ex4/sunnyCloudy.png';
     } else {
-      return 'lib/assets/ex4/sunny.png';
+      return 'assets/ex4/sunny.png';
     }
   }
 

@@ -12,19 +12,18 @@ void main() {
               text: 'submit',
               icon: Icons.check,
               iconPosition: IconPosition.right,
-              buttonType: ButtonType.disabled,
+              buttonType: ButtonType.primary,
             ),
             CustomButton(
               text: 'Time',
               icon: Icons.time_to_leave,
-              iconPosition: IconPosition.left,
-              buttonType: ButtonType.primary,
+              buttonType: ButtonType.secondary,
             ),
             CustomButton(
               text: 'Account',
               icon: Icons.disabled_by_default,
               iconPosition: IconPosition.left,
-              buttonType: ButtonType.secondary,
+              buttonType: ButtonType.disabled,
             ),
           ],
         ),
@@ -51,7 +50,7 @@ class CustomButton extends StatelessWidget {
     this.buttonType = ButtonType.primary,
   });
 
-  Color _getButtonColor() {
+  Color getButtonColor() {
     switch (buttonType) {
       case ButtonType.disabled:
         return Colors.grey;
@@ -71,15 +70,15 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: isDisabled ? null : () {},
         style: ElevatedButton.styleFrom(
-          backgroundColor: _getButtonColor(),
+          backgroundColor: getButtonColor(),
           padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
         ),
-        child: _buildIconPosition(),
+        child: buildIconPosition(),
       ),
     );
   }
 
-  Widget _buildIconPosition() {
+  Widget buildIconPosition() {
     if (iconPosition == IconPosition.left) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
